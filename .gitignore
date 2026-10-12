@@ -13,4 +13,10 @@ conversation_record/
 .streamlit/secrets.toml
 
 # 如果不想把那几张截图传上去，把下面这行的 # 去掉
-# 0*.png
+02.png
+03.png
+04.png
+Deepseek调用.py
+img.png
+/assets/
+/实验与探索/

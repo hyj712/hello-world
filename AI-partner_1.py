@@ -31,7 +31,7 @@ if _password and not st.session_state.get("gate_passed"):
 # page title
 st.title("AI智能伴侣")
 st.subheader("made by hyj712 from github")
-st.logo("./img.png")
+st.logo("img.png")
 
 
 # environment configuration
@@ -83,8 +83,8 @@ def create_conversation_file():
 
 def list_conversation_history():
     st.text("历史会话")
-    if os.path.exists("./conversation_record"):
-        for i in os.listdir("./conversation_record"):
+    if os.path.exists("conversation_record"):
+        for i in os.listdir("conversation_record"):
             col1,col2 = st.columns([3,1])
             with col1:
 
@@ -152,7 +152,7 @@ def stream_response():
         yield f"\n\n[出错了：{e}]"
 
 def check_avoid_file_repetition():
-    for file in os.listdir("./conversation_record"):
+    for file in os.listdir("conversation_record"):
         with open(f"./conversation_record/{file}", "r") as f:
             data = json.load(f)
             if data["system_prompt"][0] == st.session_state.partner_name and data["system_prompt"][1] == st.session_state.partner_character and data["messages"] == st.session_state.messages:
@@ -183,8 +183,8 @@ if "messages" not in st.session_state:
     st.session_state.messages = []          #to store the conversation history
 #if "system prompt" not in st.session_state:
    # st.session_state.system_prompt = []     # to store the system prompt
-if not os.path.exists("./conversation_record"):
-    os.makedirs("./conversation_record")
+if not os.path.exists("conversation_record"):
+    os.makedirs("conversation_record")
 if "partner_name" not in st.session_state:
     st.session_state.partner_name = ""
 if "partner_character" not in st.session_state:

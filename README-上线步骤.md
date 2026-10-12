@@ -4,7 +4,7 @@
 
 | 文件 | 作用 |
 |---|---|
-| `app.py` | 启动器，3 行，负责运行你的 `AI-partner_1.py`（这样 Streamlit 那边的入口不用改） |
+| `app.py` | 启动器，3 行，负责运行你的 `AI partner/AI-partner_1.py`（这样 Streamlit 那边的入口不用改） |
 | `requirements.txt` | 告诉 Streamlit Cloud 装 `streamlit` 和 `openai` |
 | `.gitignore` | 防止把聊天记录、`.DS_Store` 传上 GitHub |
 | `.streamlit/config.toml` | 深色主题（可选，删掉也能跑） |
@@ -18,7 +18,7 @@
 cp -R /Users/hyj/Documents/deepseek-harness/default-workspace/pycharm-deploy/. ~/PycharmProjects/AI应用/
 ```
 
-## 第 2 步：给你自己的 `AI-partner_1.py` 打补丁
+## 第 2 步：给你自己的 `AI partner/AI-partner_1.py` 打补丁
 
 见聊天窗口里给的两段代码（一处必须改：key 的读法；一处可选：自定义头像）。
 
