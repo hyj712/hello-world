@@ -114,7 +114,7 @@ def delete_conversation(conversation_time):
         st.session_state.partner_character = ""
         st.session_state.messages = []
         reset_partner_inputs()
-        st.rerun()
+    st.rerun()
 
     # for file in os.listdir("./conversation_record"):
     #     with open(f"./conversation_record/{conversation_time}/{file}", "r") as f:
