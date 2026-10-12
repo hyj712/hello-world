@@ -1,0 +1,16 @@
+# 不要上传到 GitHub 的东西
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+
+# 聊天记录（每个人本地自己的记录，不用传）
+conversation_record/
+
+# 密钥文件（如果你的代码以后要用 secrets.toml 本机测试）
+.streamlit/secrets.toml
+
+# 如果不想把那几张截图传上去，把下面这行的 # 去掉
+# 0*.png
